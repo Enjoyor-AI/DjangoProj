@@ -714,23 +714,19 @@ def MainProcess():
     IntersectInfo = CallOracle()  # 从数据库读取路口列表
     currenttime = dt.datetime.now()
     last_date = currenttime.date()
-    # try:
-    #     os.remove('E:\PROGRAME\log\scats_strategic_resolve_fail_node' + str(last_date) + '.txt')
-    #     print('清理已存在日志文件')
-    # except Exception as e:
-    #     print('日志文件还未创建')
-    # try:
-    #     os.remove('E:\PROGRAME\log\scats_strategic_nodata_node' + str(last_date) + '.txt')
-    #     print('清理已存在日志文件')
-    # except Exception as e:
-    #     print('日志文件还未创建')
+
+
     if len(IntersectInfo) > 0:
         IntersectIDlist = IntersectInfo['SITEID']
+        pg_inf_inter_info = {'database': "inter_info", 'user': "django", 'password': "postgres",
+                             'host': "192.168.20.46", 'port': "5432"}
+
         try:
-            pg = Postgres(ConnectInf.pg_inf_inter_info)
+            pg = Postgres(pg_inf_inter_info)
         except Exception as e:
             print('MainProcess:连接数据库失败', e)
         else:
+
             IntStrInput = pg.call_pg_data(sql_get_scats_input)
             print(IntStrInput)
             if IntStrInput is not None:

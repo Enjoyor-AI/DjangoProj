@@ -95,31 +95,28 @@ def get_scats_int():
     currenttime = dt.datetime.now()
     if len(IntersectInfo) > 0:
         IntersectIDlist = IntersectInfo['SITEID']
+        pg_inf_inter_info = {'database': "inter_info", 'user': "django", 'password': "postgres",
+                             'host': "192.168.20.46", 'port': "5432"}
         try:
-            conn = cx_Oracle.connect(CONSTANT.OracleUser)  # 连接数据库
+            pg = Postgres(pg_inf_inter_info)
         except Exception as e:
             print('MainProcess:连接数据库失败', e)
         else:
-            cr = conn.cursor()  # 建立游标
-            try:
-                cr.execute("SELECT * FROM INT_STR_INPUT order by SITEID")  # 从Oracle中读取数据
-                IntStrInput = cr.fetchall()
-            except Exception as e:
-                print("oracle连接失败", e)
-            else:
-                conn.commit()
-                # print(IntersectIDlist)
-                # print(group)
+            sql_get_scats_input = """
+            select b.sys_code,a.channel_id,a.lane_one_id,a.lane_two_id,a.lane_three_id,a.lane_four_id from pe_tobj_channel a 
+            left JOIN(
+            select distinct node_id,sys_code from pe_tobj_node_info
+            ) b on a.node_id=b.node_id
+            """
+            IntStrInput = pg.call_pg_data(sql_get_scats_input)
+            print(IntStrInput)
+            if IntStrInput is not None:
                 int_id = np.array(IntersectIDlist).tolist()
                 int_num = len(int_id)
                 print("请求总路口数：", int_num)
                 group = round(int_num / CONSTANT.group_interval, 0) + 1
                 int_grouped_data = int_grouped(int_id, group)
                 return group, int_grouped_data, IntStrInput
-
-            finally:
-                cr.close()
-                conn.close()
     else:
         print('获取节点列表失败')
 
@@ -164,6 +161,21 @@ def create_scheduler():
         # 开启接口数据修复程序
         scheduler.add_job(interface_check, 'cron', hour='2', minute='0', id='interface_check', replace_existing=True)
         # 启动所有调度任务（开车了，嘟嘟嘟）
+        try:
+            group, int_list, scats_input = get_scats_int()
+        except Exception as e:
+            logger.error(e)
+            print(e)
+        else:
+            logger.info("get scats basic inf successfully!")
+            scheduler.add_job(thread_creat, "interval", minutes=5, id='scats_salklist',
+                              args=[group, int_list, scats_input],
+                              replace_existing=True)
+            scheduler.add_job(RequestDynaDataFromInt, "interval", minutes=5, id='scats_volumns', args=[int_list],
+                              replace_existing=True)
+            scheduler.add_job(get_operate, "interval", minutes=3, id='scats_operate', args=[],
+                              replace_existing=True)
+
         scheduler.start()
         print(scheduler.get_jobs())
         print(scheduler.state)
