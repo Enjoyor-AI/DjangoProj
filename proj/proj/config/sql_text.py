@@ -1,7 +1,7 @@
 
 class SqlText():
-    # OracleUser = 'enjoyor/admin@192.168.20.56/orcl'
-    OracleUser = 'enjoyor/admin@33.83.100.139/orcl'
+    OracleUser = 'enjoyor/admin@192.168.20.103/orcl'
+    # OracleUser = 'enjoyor/admin@33.83.100.139/orcl'
     sql_get_spilt_number="""select split ,count(*)  as spilt_number from scats_int_state_feedback group by split"""
     sql_get_cycle_number="""select cycle ,count(*)  as cycle_number from scats_int_state_feedback group by cycle"""
     # 清除设定日期之前的实时相位数据

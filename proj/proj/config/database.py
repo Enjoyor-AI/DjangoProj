@@ -24,6 +24,9 @@ class ConnectInf:
                     'host': "192.168.20.46", 'port': "5432"}
     pg_inf_django = {'database': "django", 'user': "django", 'password': "postgres",
                      'host': "192.168.20.45", 'port': "5432"}
+    pg_inf_inter_info = {'database': "inter_info", 'user': "django", 'password': "postgres",
+                         'host': "192.168.20.46", 'port': "5432"}
+
     INTER_INF_IP = '192.168.20.45'
     """支队33网段"""
     # DATABASES = {

@@ -1,4 +1,4 @@
-from proj.config.database import Oracle, Postgres
+from proj.config.database import Oracle, Postgres,ConnectInf
 from proj.python_project.scats_interface.pram_conf import *
 import datetime as dt
 import cx_Oracle
@@ -62,24 +62,21 @@ class InterfaceStatus():
         return data_num
 
     @timer
-    def parsing_failed_check(self, date):
+    def parsing_failed_check(self, date,sdate,edate):
         # stime = dt.datetime.strptime(stime, '%Y-%m-%d %H:%M:%S')
         # etime = dt.datetime.strptime(etime, '%Y-%m-%d %H:%M:%S')
         try:
-            self.cr.execute(sql_failed_detector, a=date, b=parse_failed_judge)
-
+            self.cr.execute(sql_failed_detector, a=date, b=parse_failed_judge,c=sdate,d=edate)
         except cx_Oracle.InterfaceError:
+            # 如果连接异常，重新连接数据库
             self.conn, self.cr = self.ora.db_conn()
-            self.cr.execute(sql_failed_detector, a=date, b=parse_failed_judge)
-
+            self.cr.execute(sql_failed_detector, a=date, b=parse_failed_judge,c=sdate,d=edate)
         result = self.cr.fetchall()
-        if IF_TEST:
+        if IF_TEST:     #测试模式
             result = list(result)
             for i in range(len(result)):
                 result[i] = list(result[i])
-                result[i][3] = str(dt.datetime.now().date())
-
-        # print(result)
+                # result[i][3] = str(dt.datetime.now().date())
         self.conn.commit()
         return result
 
@@ -159,13 +156,16 @@ class InterfaceStatus():
         self.pg.send_pg_data(sql=sql_send_message, data=message_operate)
         return
 
-    def parse_failed_detector_send(self):
+    def parse_failed_detector_send(self,delta):
         current_time = dt.datetime.now()
         # current_date = current_time.date()
+        start_time = current_time - 2 * dt.timedelta(minutes=delta)
+        end_time = current_time - dt.timedelta(minutes=delta)
         current_date = str(current_time.date())
         if IF_TEST:
             current_date = '2018-11-09'
-        failed_detector = self.parsing_failed_check(current_date)
+        failed_detector = self.parsing_failed_check(start_time,end_time)
+        pg = Postgres(ConnectInf.pg_inf_inter_info)
         self.pg.send_pg_data(sql=sql_send_parse_failed_detector, data=failed_detector)
         return
 
