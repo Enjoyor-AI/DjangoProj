@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18072e10-0386-4ecb-900d-f116c66202f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DjangoProj.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/proj/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proj/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proj/proj/controller/Interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj/proj/controller/Interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proj/proj/controller/schedular_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj/proj/controller/schedular_task.py" afterDir="false" />
@@ -57,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -147,7 +141,7 @@
     <option name="totallyTimeSpent" value="1836000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -160,7 +154,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32962137" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

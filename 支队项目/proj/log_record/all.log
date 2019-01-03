@@ -1,0 +1,2 @@
+2019-01-03 08:53:36,704 - schedular_task.py - [line:166] - ERROR - 'NoneType' object is not iterable
+2019-01-03 08:58:51,972 - schedular_task.py - [line:186] - INFO - start scheduler task
