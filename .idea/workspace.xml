@@ -1,66 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18072e10-0386-4ecb-900d-f116c66202f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/proj/config/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj/proj/config/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/proj/controller/schedular_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj/proj/controller/schedular_task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/proj/python_project/scats_interface/runStrategicinfo_getdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj/proj/python_project/scats_interface/runStrategicinfo_getdata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/GlobalContent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/active_plot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/alarm_data_regular_filter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/alarm_data_regular_filter2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/bayes_predict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/database_his.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/get_alarmdata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_predict/operate_statistic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/SituationAlarm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/SituationOperate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/SituationTraffic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/alarm_auto_dispose.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/alarm_data_regular_filter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/alarm_rdsect_match.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/control_pram.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/alarm_priority_algorithm1126/operate_statistic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/ali_alarm/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/abnormal_intersection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/abnormal_intersection.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/detector_diagnosis_list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/detector_disgnosis_detail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/detector_plot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/log/all2018-12-03.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/log/all2018-12-04.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/maintain_list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/show_maintain_list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/detector_diagnosis/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/Request_Data_From_Int.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/condition_monitor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/data_request_check.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/pram_conf.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/real_time_phase_inf.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/real_time_salkdata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/runStrategicinfo_getdata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/scats_5min_volumns.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/接口测试脚本/4-8实时相位接口测试-912test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/接口测试脚本/4-8实时相位接口测试.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/接口测试脚本/SCATS接口服务检查.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/接口测试脚本/phase_split_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_interface/接口测试脚本/路口数量检测.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_operate_parsing/content.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_operate_parsing/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_operate_parsing/database_gai.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_operate_parsing/operate_record_resolve.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_operate_parsing/seperate_operate_record.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/scats_operate_parsing/state_information_feedback.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/test_api/Data_Recovery.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/test_api/GlobalVar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/test_api/detector_online.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/python_project/test_api/detector_result_merge.py" beforeDir="false" />
-    </list>
+    <list default="true" id="18072e10-0386-4ecb-900d-f116c66202f4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -195,7 +136,7 @@
     <option name="totallyTimeSpent" value="1242000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
