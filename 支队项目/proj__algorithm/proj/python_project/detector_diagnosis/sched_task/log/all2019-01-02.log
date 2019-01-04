@@ -1,0 +1,2 @@
+2019-01-02 11:01:44,218 - detector_task.py - [line:76] - ERROR - when calling postgresql, name 'Postgres' is not defined
+2019-01-02 11:02:24,109 - detector_task.py - [line:76] - ERROR - when calling postgresql, name 'Postgres' is not defined
